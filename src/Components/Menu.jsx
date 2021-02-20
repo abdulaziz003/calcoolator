@@ -1,52 +1,46 @@
 import React from 'react';
 
-const tweet    = 'I just found a beautiful web-based calculator made with '
-               + 'React! You should try it! '
+const tweet    = 'صممت آلة حاسبة باستخدام Reactjs جربها واعطني رأيك'
                + 'https://spaniarddev.github.io/the-calcoolator/ \n\n';
-const tweetURL = 'https://twitter.com/intent/tweet?'
-                  + 'hashtags=calculator,calcoolator,webdesign,FreeCodeCamp,'
-                    + 'Coders,Dev,React,Javascript'
-                  + '&via=spaniarddev'
-                  + '&related=freecodecamp&text=' +
-                  encodeURIComponent( tweet );
+const tweetURL = 'https://twitter.com/abdulaziz003';
 
 const Menu = props => {
   return (
     <div className={props.showMenu ? 'menu hide' : 'menu'}>
       <small className="goBack" onClick={() => props.toggleMenu()}>
-        {'◄ back to business'}
+        {'◄ العودة للحساب'}
       </small>
-      <section>
-        <h6>Let your friends know</h6>
-        <p>Hi,</p>
+      <section dir="rtl">
+        <h6>أخبر اصدقائك</h6>
+        <p>مرحبا,</p>
         <p>
-          If you think this <strong>calcoolator</strong> thing is worth it,
-          please{' '}
+          اذا اعتقدت آن  <strong>الآلة الحاسبة الرائعة</strong>  تستحق 
+          
           <a
             className="item"
             href={tweetURL}
             rel="noopener noreferrer"
             target="_blank"
-            alt="Tweet to your friends"
-            title="Tweet to your friends"
+            alt="منشن حسابي بتغريدة"
+            title="منشن حسابي بتغريدة"
             tabIndex="-1"
-          >
-            spread the word on Twitter
-          </a>{' '}
-          and let your friends know!
+          > 
+             منشن حسابي بتغريدة 
+           </a> 
+            واخبر اصدقائك
         </p>
-        <p>Of course, any feedback is more than welcome.</p>
-        <p>Thanks for your time,</p>
+        <p>وبالطبع أي ملاحظات استقبلها بصدر رحب</p>
+        <p>أشكرك</p>
         <p>
           <a
-            href="https://twitter.com/SpaniardDev/"
+            href="https://twitter.com/abdulaziz003/"
             target="_blank"
             rel="noopener noreferrer"
-            alt="about spaniardDev"
-            title="about spaniardDev"
+            alt="عبدالعزيز البيضاني"
+            title="عبدالعزيز البيضاني"
             tabIndex="-1"
           >
-            spaniardDev
+            عبدالعزيز البيضاني
           </a>
         </p>
       </section>

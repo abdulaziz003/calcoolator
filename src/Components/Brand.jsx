@@ -4,7 +4,7 @@ import            './Brand.css';
 const Brand = props => {
   return (
     <section className="brand">
-      cal<span className="highlighted">cool</span>ator
+       آلة حاسبة <span className="highlighted">رائعة</span>
     </section>
   );
 };

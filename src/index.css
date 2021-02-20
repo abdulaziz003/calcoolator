@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Kaushan+Script');
+@import url('https://fonts.googleapis.com/css2?family=Almarai&display=swap');
 
 /* Prettify the testing button */
 #hamburger_top, #hamburger_middle, #hamburger_bottom {
@@ -26,7 +27,7 @@ body {
   flex-direction    : column;
   justify-content   : center;
   align-items       : center;
-  font-family       : 'Josefin Sans', sans-serif;
+  font-family: 'Almarai', sans-serif;
   font-size         : 1.5rem;
   color             : hsl(230, 100%, 90%);
   background        : hsl(220, 30%, 30%);

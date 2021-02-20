@@ -8,21 +8,21 @@ class Calculator extends Component {
   constructor( props ) {
     super( props );
     this.actions = [
-      'clear', '↶', '❀', 'menu',
+      'مسح', '↶', '❀', 'القائمة',
       '7', '8', '9', '÷',
       '4', '5', '6', '×',
       '1', '2', '3', '-',
       '.', '0', '=', '+'
     ];
     this.state = {
-      expression   : 'do your math',
+      expression   : 'أبدأ الحساب',
       result       : '0',
       showMenu     : false,
       loadTheme    : '',
       manyDecimals : false 
     };
-    this.PLACEHOLDER  = 'do your math';
-    this.ERROR        = 'Bad Expression!';
+    this.PLACEHOLDER  = 'أبدأ الحساب';
+    this.ERROR        = 'خطأ بكتابة المعادلة';
     this.manyDecimals = false;
     this.themes       = {
       list: ['', 'Yellow.css', 'Blue.css', 'Green.css', 'Light.css'],
@@ -118,10 +118,10 @@ class Calculator extends Component {
     const currExpr = String( this.state.expression );
     let updateExpr = '';
     let updateRslt = this.state.result;
-    if      ( pad === 'clear' ) return this.clearDisplay( );
+    if      ( pad === 'مسح' ) return this.clearDisplay( );
     else if ( pad === '↶'     ) updateExpr = this.unDo( currExpr );
     else if ( pad === '❀'     ) return this.changeTheme();
-    else if ( pad === 'menu'  ) return this.toggleMenu( );
+    else if ( pad === 'القائمة'  ) return this.toggleMenu( );
     else if ( !isNaN( pad )   ) updateExpr = this.addDigit( currExpr, pad );
     else if ( pad === '.'     ) updateExpr = this.addDecimal( currExpr, pad );
     else if ( pad === '+'
@@ -163,7 +163,7 @@ class Calculator extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         { this.loadTheme() }
         <Display expr={this.state.expression} result={this.state.result} manyDecimals={this.state.manyDecimals} />
         <Brand />
@@ -173,7 +173,7 @@ class Calculator extends Component {
           toggleMenu={this.toggleMenu}
           showMenu={this.state.showMenu}
         />
-      </React.Fragment>
+      </>
     );
   }
 }
